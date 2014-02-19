@@ -1,0 +1,7 @@
+Academic-Webpage is a standalone utility to manage website content for academics. It allows you to visually add/edit/organize entities on a man webpage, allowing you to add publications, lecture notes, all with file attachments. It is generic enough to be used for any (non-academic) web site with static content.
+
+To run the program use awmanage.py script.
+
+Requirements
+---------------
+Works with Python 3. Requires cherrypy and jinja2 libraries.

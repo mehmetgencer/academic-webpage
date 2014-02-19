@@ -1,0 +1,47 @@
+function esdebug(msg) {
+   if (!window.console) {
+   } else
+      window.console.log(msg);
+}
+
+function makeAPICall(url, appdata, callbackSuccess, callbackFailure) {
+	esdebug("Making API call:"+url+"\n  "+JSON.stringify(appdata));
+	//gkutil_waitStart();
+   $.ajax({
+      type: "POST",
+      url: url,
+      data: JSON.stringify(appdata),
+      contentType: "application/json; charset=utf-8",
+      //headers:  {'X-CSRFToken': gkutil_allCookies.getItem('csrftoken')},
+      dataType: "json",
+      success: function(data) {
+      	//gkutil_waitEnd();
+         if (data["status"]!=0)
+            if (callbackFailure==null)
+              alert("Bir işlem hatası oluştu:"+data["message"]);
+            else
+              callbackFailure(data["status"], data["message"]);
+         else
+            callbackSuccess(data["result"]); 
+          },
+      failure: function(errMsg) {
+      	//gkutil_waitEnd();
+           alert("Bir bağlantı hatası oluştu:"+errMsg);
+      }
+   });
+}
+
+function getProfile() {
+	esdebug("Getting profile");
+	makeAPICall("/api/getProfile",{},function(data){esdebug(JSON.stringify(data));});
+}
+
+function createSection(){
+	makeAPICall("/api/createSection",{},function(){window.location.reload();});
+}
+
+function createPublicationInSection(section){
+	//esdebug("Create pub in section:"+section);
+	//return;
+	makeAPICall("/api/createPub",{"section":section},function(){window.location.reload();});
+}

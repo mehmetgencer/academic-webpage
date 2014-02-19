@@ -1,0 +1,8 @@
+{
+ 'associations': [],
+ 'chosenDesign': '',
+ 'desc': "",
+ 'name': 'No name given',
+ 'profiledesc': "no description",
+ 'sections': []
+ }

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>e-Skolastik Yardım Sayfaları</title>
+</head>
+<body>
+<div id="header">
+<h1 class="title">e-Skolastik Yardım Sayfaları</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#kullanıcılar-için">Kullanıcılar için</a><ul>
+<li><a href="#profilimi-nasıl-düzenleyeceğim">Profilimi nasıl düzenleyeceğim?</a></li>
+<li><a href="#e-skolastik-profilimi-alıp-başka-bir-yere-koyabilir-miyim">e-Skolastik profilimi alıp başka bir yere koyabilir miyim?</a></li>
+<li><a href="#yayın-dışındaki-şeyleri-nasıl-listeleyebilirim">Yayın dışındaki şeyleri nasıl listeleyebilirim?</a></li>
+</ul></li>
+<li><a href="#ileri-düzey-kullanıcılar-için">İleri düzey kullanıcılar için</a><ul>
+<li><a href="#kendi-tasarımınızı-yapma">Kendi tasarımınızı yapma</a></li>
+</ul></li>
+<li><a href="#geliştiriciler-için">Geliştiriciler için</a></li>
+</ul>
+</div>
+<h1 id="kullanıcılar-için"><a href="#TOC">Kullanıcılar için</a></h1>
+<h2 id="profilimi-nasıl-düzenleyeceğim"><a href="#TOC">Profilimi nasıl düzenleyeceğim?</a></h2>
+<p>Öncelikle profil yönetim ekranındaki + işareti ile bir bölüm ekleyin. Her bölümün altına A+ N+ işaretlerini kullanarak akademik yayınlar veya akademik olmayan yayınlar/belgeler ekleyebilirsiniz. Akademik yayınlar bibliyografik bilgileri (yazar, bölüm, editçrler, vb.) girebileceğiniz şekilde tasarlanmıştır. Bunun dışındaki (ders notu, vs.) yayınları akademik olmayan belge olarak girebilirsiniz.</p>
+<p>Ayrıca bölümleri kendi içinde alt bölümlere ayırmak için S+ ikonu ile &quot;altbölüm ayracı&quot; ekleyebilirsiniz. Altbölüm ayracına &quot;açıklama&quot; girerek bu ayracın tamamını bir altbölüm gibi de kullanabilirsiniz.</p>
+<p>Profil yönetim ekranının en üstündeki profil ayarları kısmına gireceğiniz açıklama ve seçeceğiniz resim (max 1MB) profilinizin en üstünde gözükecektir. Bu açıklama kısmına iletişim bilgilerinizi eklemeniz önerilir.</p>
+<p>Profilinizdeki yayınlar için bir veya birden fazla dosya ekleyebilirsiniz. Bu dosyalar en fazla 5MB olabilir.</p>
+<h2 id="e-skolastik-profilimi-alıp-başka-bir-yere-koyabilir-miyim"><a href="#TOC">e-Skolastik profilimi alıp başka bir yere koyabilir miyim?</a></h2>
+<p>e-Skolastik bunu yapabilmeniz için tasarlanmıştır. Tabii profilinizi her değiştirdiğinizde aktarma işlemini tekrarlamanız gerekeceğini unutmayın.</p>
+<p>Linux kullanıcıları 'wget' programı ile bu işlemi kolayca yapabilirler. Programa profil linkinizi verip uygun seçenekleri kullanarak profil sayfanızı ve onun içine gömülü diğer dosyaları yerel dosya sisteminize indirebilirsiniz.</p>
+<p>Örnek: wget -r -p -I /files -I /bigfiles http://e-skolastik.appspot.com/MehmetGencer/</p>
+<h2 id="yayın-dışındaki-şeyleri-nasıl-listeleyebilirim"><a href="#TOC">Yayın dışındaki şeyleri nasıl listeleyebilirim?</a></h2>
+<p>Örneğin üyesi bulunduğunuz meslek örgütlerini listeleyeceksiniz. Bunun en pratik yolu bunun için bir bölüm veya bölü ayracının açıklama kısmını kullanmaktır. Açıklama kısımlarına girdiğinizde beliren editör size bu kısımlara liste girme imkanı verir.</p>
+<h1 id="ileri-düzey-kullanıcılar-için"><a href="#TOC">İleri düzey kullanıcılar için</a></h1>
+<p>Yönetim sayfasında sağ üst köşedeki 'Gelişmiş ayarları göster' seçeneği ile normalde gözükmeyen bazı ayarları görünür hale getirebilirsiniz. Bu yeni ayarlar kendi sayfa tasarımınızı oluşturmak, metin parçacıklarının tercümesini girmek gibi işlevleri etkinleştirir.</p>
+<h2 id="kendi-tasarımınızı-yapma"><a href="#TOC">Kendi tasarımınızı yapma</a></h2>
+<p>e-Skolastik profil sayfaları http://akdubya.github.com/dustjs/ şablonları kullanılarak görüntülenir. Tüm profil bilgileriniz tek bir JSON veri yapısı olarak seçilen dust.js şablonuna verilir ve bu şablondan çıkan HTML profil sayfasını oluşturur. Bu işlemlerin tamamı istemcide (web tarayıcı) yapılmaktadır.</p>
+<p>Kendi tasarımınızı yapabilmek için iki bilgiye ihtiyacınız olacak. Birincisi profil bilgilerinizin JSON veri yapısı. Aşağıdaki -basitleştirilmiş- örnekte birden fazla sayıda olabilecek listeler ... ile gösterilmiştir:</p>
+<pre><code>  {
+    &quot;title&quot;: &quot;Profil başlığı&quot;,
+    &quot;profiledesc&quot;: &quot;Profil açıklaması&quot;,
+    &quot;profilePicture&quot;: { 
+      &quot;fileUrl&quot;: &quot;/files/ag9kZXZ-ZS1za29sYXN0aWtyIgsSB1Byb2ZpbGUYAQwLEg5Qcm9maWxlUGljdHVyZRi5Fww&quot;,
+      &quot;fileName&quot;: &quot;foto.jpg&quot;
+    },
+    &quot;sections&quot;: [
+      {
+        &quot;secdesc&quot;: &quot;Bölüm açıklaması&quot;,
+        &quot;sectionKey&quot;: 111, //Bu bölüme sistem tarafından verilmiş tekil bir sayı.
+        &quot;publications&quot;: [
+          {
+            &quot;title&quot;: &quot;yayın 1&quot;,
+            &quot;publicationKey&quot;:222, //Bu yayına sistem tarafından verilmiş tekil bir sayı
+            &quot;desc&quot;: &quot;yayın açıklaması&quot;,
+            &quot;ispub&quot;: true, //eğer doğru ise bu bir akademik yayındır ve aşağıdaki &quot;pubinfo&quot; alanları kullanılır
+                           //Değilse sadece başlık ve açıklama alanları kullanılmalıdır.
+            &quot;issep&quot;: false, //Bu bir alt-bölüm ayracı ise &#39;true&#39; değerini alır.
+            &quot;pubtype&quot;: &quot;inproceedings&quot;,
+            &quot;pfiles&quot;: [
+              { 
+                &quot;fileUrl&quot;: &quot;/files/ag9kZXZ-ZS1za29sYXN0aWtyQwsSB1Byb2ZpbGUYAQwLEgdTZWN0aW9uGOkHDAsSC1B1YmxpY2F0aW9uGOsHDAsSD1B1YmxpY2F0aW9uRmlsZRjvBww&quot;,
+                &quot;fileName&quot;: &quot;makale.pdf&quot;
+              }, ...],
+            &quot;pubinfo&quot;: {
+              &quot;publisher&quot;: &quot;Springer&quot;,
+              ...
+              //Burada çok sayıda bilgi alanı var. Bunlar BibTeX standardına göre düzenlenmiştir.
+              //ancak aşağıda göreceğiniz üzere yayınların bibliyografik özetini citeproc-js kullanarak
+              //bu alanları hiç işlemeden çıkartabileceksiniz.
+            },
+            &quot;authors&quot;: [{&quot;name&quot;: &quot;Mehmet Gençer&quot;}, ...]
+          }, ...
+      ]
+  }</code></pre>
+<p>Kendi tasarımınızı yaparken ikinci olarak yukarıdaki veri yapısını tarayıp HTML üretecek dust.js döngülerini kurmanız gerekecektir. Yeni bir tasarım yaratınca öntanımlı olarak gelen aşağıdaki dust.js kodu çok kısa bir şekilde bunu yapıyor:</p>
+<pre><code>&lt;div class=&quot;estemplate&quot; tid=&quot;default&quot;&gt;
+  Profil: {title} &lt;br/&gt;
+  {#sections}
+    Bölüm: {.title}&amp;lt;br/&amp;gt;
+    Açıklama: {.secdesc}&amp;lt;br/&amp;gt;
+    {#publications}
+      {.title}
+    {/publications}
+  {/sections}
+  &lt;/div&gt;</code></pre>
+<p>Dust.js kullanırken sadece {...} kodları özel bir anlam taşır. Bunun dışında kalanlar HTML. Örneğin {title} kodu JSON veri yapısında en üst düzeydeki &quot;title&quot; alanının içeriğini görüntüler.</p>
+<p>{#sections} ile başlayıp {/sections} ile biten kısım ise JSON yapısında bir liste olan &quot;sections&quot; alanının her liste elemanı için tekrar edilecek bir döngüdür. Her tekrarda eldeki liste elemanını, ki bu örnekte bir sözlük (map, dictionary), kullanabileceğimiz dust.js veri alanlarına eklenir. Bu yüzden section döngüsünün içerisinde {.title} dediğimizde en derindeki &quot;title&quot; isimli alan anlaşılır. sadece {title} yazsaydık en yüksekteki (yani profil'e ait 'title') anlaşılırdı.</p>
+<p>'sections' döngüsünün içinde de bir 'publications' döngüsü bulunmaktadır. Orada da bir {.title} var, ve bu kez yayın'ın başlığını kastediyoruz. İsterseniz 'publications' döngüsünün içine de bir döngü ekleyip yayına ait dosyaları listeleyebilirsiniz (en sondaki örnek) Tasarımlarda koşullu işlemler de yaptırabilirsiniz. Örneğin yayınlarda akademik olan (daha doğrusu standart kalıplara uyan) ve olmayan ayırımı var. Bu ayırımı bize söyleyen &quot;ispub&quot; veri alanı, ki mantıksal (doğru/yanlış değeri alan) bir veri alanıdır. Bunun için koşullu bir tasarım yapmak istersek dust.js'te mantıksal alanlara göre koşullu işlem için kullanılan {?ispub}...{:else}...{/ispoub} kalıbını kullanmamız gerekecek:</p>
+<pre><code>  &lt;div class=&quot;estemplate&quot; tid=&quot;default&quot;&gt;
+  Profil: {title} &lt;br/&gt;
+  {#sections}
+    Bölüm: {.title}&lt;br/&gt;
+    Açıklama: {.secdesc}&lt;br/&gt;
+    {#publications}
+      {.title}
+      {?ispub}
+       Bu akademik bir yayın...
+      {:else}
+       Akademik olmayan yayın. Açıklama: {.desc}
+      {/ispub}
+    {/publications}
+  {/sections}
+  &lt;/div&gt;</code></pre>
+<p>Bu son örnekte &quot;.ispub&quot; kullanmaya gerek duymadan &quot;ispub&quot; kullandık. Daha derinlerde aynı ismi taşıyan veri olmadığından bir karışıklık çıkmıyor.</p>
+<p>Yayın bilgilerinin alıntılamaya uygun bibliyografik formatlaması için altyapıda citeproc-js kullanılmıştır. Bundan yararlanmak için akademik tipteki yayının içinde {#citeproc/} kodunu koymanız yeterli olur:</p>
+<pre><code>  &lt;div class=&quot;estemplate&quot; tid=&quot;default&quot;&gt;
+  Profil: {title} &lt;br/&gt;
+  {#sections}
+    Bölüm: {.title}&lt;br/&gt;
+    Açıklama: {.secdesc}&lt;br/&gt;
+    {#publications}
+      {.title}
+      {?ispub}
+       {#citeproc/}
+      {:else}
+       Akademik olmayan yayın. Açıklama: {.desc}
+      {/ispub}
+    {/publications}
+  {/sections}
+  &lt;/div&gt;</code></pre>
+<p>Son olarak bu tasarıma (1) Türkçe bilmeyen ziyaretçilere de hitap etmesi için tercüme, ve (2) yayın dosyalarını görüntüleme ekleyelim. Tercüme için {#i18n msg=&quot;tercümesi yapılacak metin&quot;/} benzeri bir kod kullanın. Tabii tercümenin gerçekleşmesi için gelişmiş ayarlar ekranının sonundaki kısmı kullanarak tercümelerinizi yapın (büyük/küçük harf hassastır). Artık ziyaretçiler web tarayıcılarında hangi dili tercih ettilerse profil sayfasındaki yazılar o dile çevrilir. 'msg' parametresine değer olarak bir alan ismi de verebilirsiniz (mesela makale başlıklarını tercüme etmek için!). Verilen metnin tercümesi bulunamazsa aynen kendisi yazılır. Dolayısıyla bu şekilde bir tasarım ile zaman içerisinde tercüme kataloğunuzu genişletebilirsiniz. &quot;Bölüm&quot;, &quot;Açıklama&quot; gibi kimi kelimeler sistemin tercüme kataloğunda zaten bulunduğundan onları yapmanız gerekmeyebilir.</p>
+<pre><code>  &lt;div class=&quot;estemplate&quot; tid=&quot;default&quot;&gt;
+  Profil: {title} &lt;br/&gt;
+  {#sections}
+    {#i18n msg=&quot;Bölüm&quot;/} : {#i18n msg=.title/}&lt;br/&gt;
+    Açıklama: {.secdesc}&lt;br/&gt;
+    {#publications}
+      {.title}
+      {?ispub}
+        {#citeproc/}
+      {:else}
+        Akademik olmayan yayın. Açıklama: {.desc}
+      {/ispub}
+      {#files}
+        &lt;a href=&#39;{.fileUrl}&#39;&gt;{.fileName}&lt;/a&gt;
+      {/files}
+    {/publications}
+  {/sections}
+  &lt;/div&gt;</code></pre>
+<p>Yukarıdaki örneklerin pek te iyi bir tasarım görüntüsü üretmeyeceğini belirteyim. Tasarım mekaniğini anlatabilmek için HTML kodlarını en azda tuttum.</p>
+<p>Tasarımlarınızda ayrıca HTML/CSS stili yaratabilmeniz için bir &quot;stil&quot; kutusu vardır. Tasarımınızdaki HTML elemanlarına 'class' tanımlayarak bu stilleri etkinleştirebilirsiniz.</p>
+<p>Yaptığınız tasarımlar başka kullanıcılar tarafından da kullanılabilecektir (stil ve tercümeleri dahil). Eğer bunu istemiyorsanız (çok spesifik bir amacı varsa, vb.) tasarımın açıklama kısmına bunu not düşmeyi unutmayın. Aksi takdirde tasarımınıza niteliklerini ifade eden bir isim ve açıklama vermeye çalışın.</p>
+<h1 id="geliştiriciler-için"><a href="#TOC">Geliştiriciler için</a></h1>
+<p>(Henüz yazılmamıştır)</p>
+</body>
+</html>
