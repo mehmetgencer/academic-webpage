@@ -40,6 +40,10 @@ def main():
         print("Populating directory with skeleton files")
         shutil.copytree(os.sep.join([mydir,"skeleton"]),workdir)
         shutil.copy(os.sep.join([mydir,"template.txt"]),os.sep.join([workdir,"pagedata.txt"]))
+    else:
+        for x in ["static","templates"]:
+            shutil.rmtree(os.sep.join([workdir,x]))
+            shutil.copytree(os.sep.join([mydir,"skeleton",x]),os.sep.join([workdir,x]))
     os.chdir(workdir)
     if mode=="design":
         admin.srv()

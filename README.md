@@ -15,3 +15,10 @@ Works with Python 3. Requires cherrypy and jinja2 libraries. You can install the
 
     $ sudo easy_install jinja2
     $ sudo easy_install cherrypy
+
+Additional Utilities
+---------------------
+
+awlib/htmlcontain is a utility program which attempts to make an html page self contained. For example, if you have some lecture notes with images, it is hard to upload such a file to your webpage, since you need to upload all additional image files. htmlcontain.py will avoid that by embedding images into the html file:
+
+    $ /path/to/academic-webpage/awlib/htmlcontain.py mypage.html > myselfcontainedpage.html

@@ -260,7 +260,7 @@ class AWAdmin(object):
                 fname="static/"+"/".join(a[1:])
             else:
                 fname="index.html"
-                #export.export()
+                export.export()
             mtype=mimetypes.guess_type(fname)[0]
             if mtype is None and a[-1].split(".")[-1]=="less":mtype="text/css"
             print(fname,mtype)
