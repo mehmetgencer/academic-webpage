@@ -35,7 +35,7 @@
       <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/awlib/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="16" selection-start="10874" selection-end="10874" vertical-scroll-proportion="0.0" vertical-offset="3645" max-vertical-offset="4500">
+            <state line="151" column="44" selection-start="6032" selection-end="6032" vertical-scroll-proportion="0.0" vertical-offset="2025" max-vertical-offset="4515">
               <folding>
                 <element signature="e#19#34#0" expanded="true" />
               </folding>
@@ -46,7 +46,7 @@
       <file leaf-file-name="esadmin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skeleton/static/scripts/esadmin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="30" selection-start="6197" selection-end="6197" vertical-scroll-proportion="-6.4310346" vertical-offset="2192" max-vertical-offset="4845">
+            <state line="228" column="97" selection-start="8595" selection-end="8595" vertical-scroll-proportion="-9.913794" vertical-offset="2845" max-vertical-offset="4860">
               <folding />
             </state>
           </provider>
@@ -55,19 +55,10 @@
       <file leaf-file-name="admin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skeleton/templates/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="90" selection-start="3115" selection-end="3115" vertical-scroll-proportion="-6.2982454" vertical-offset="526" max-vertical-offset="3285">
+            <state line="142" column="52" selection-start="10993" selection-end="10993" vertical-scroll-proportion="-9.578947" vertical-offset="1584" max-vertical-offset="3300">
               <folding>
-                <marker date="1392812622954" expanded="false" signature="14899:14909" placeholder="..." />
+                <marker date="1392816711342" expanded="false" signature="15194:15204" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="defaultstyle.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton/static/stylesheets/defaultstyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="0" selection-end="1063" vertical-scroll-proportion="-22.2" vertical-offset="0" max-vertical-offset="645">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -92,19 +83,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skeleton/designs/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="24" selection-start="2169" selection-end="2169" vertical-scroll-proportion="-20.625" vertical-offset="720" max-vertical-offset="1455">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="htmlcontain.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/awlib/htmlcontain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="19" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.8224852" vertical-offset="209" max-vertical-offset="900">
+            <state line="78" column="56" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.5777778" vertical-offset="780" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -121,14 +103,15 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/texmplate.txt" />
-        <option value="$PROJECT_DIR$/skeleton/templates/admin.html" />
         <option value="$PROJECT_DIR$/skeleton/static/stylesheets/esadmin.less" />
         <option value="$PROJECT_DIR$/awmanage.py" />
-        <option value="$PROJECT_DIR$/awlib/admin.py" />
         <option value="$PROJECT_DIR$/skeleton/static/stylesheets/defaultstyle.css" />
         <option value="$PROJECT_DIR$/awlib/export.py" />
-        <option value="$PROJECT_DIR$/skeleton/designs/default.html" />
         <option value="$PROJECT_DIR$/awlib/htmlcontain.py" />
+        <option value="$PROJECT_DIR$/skeleton/templates/admin.html" />
+        <option value="$PROJECT_DIR$/skeleton/static/scripts/esadmin.js" />
+        <option value="$PROJECT_DIR$/awlib/admin.py" />
+        <option value="$PROJECT_DIR$/skeleton/designs/default.html" />
       </list>
     </option>
   </component>
@@ -492,48 +475,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/skeleton/static/scripts/esadmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="30" selection-start="6197" selection-end="6197" vertical-scroll-proportion="-6.4310346" vertical-offset="2192" max-vertical-offset="4845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skeleton/static/stylesheets/esadmin.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="123" column="0" selection-start="2058" selection-end="2058" vertical-scroll-proportion="-23.96" vertical-offset="1246" max-vertical-offset="1950">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/awmanage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="14" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="900">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="90" selection-start="3115" selection-end="3115" vertical-scroll-proportion="-6.2982454" vertical-offset="526" max-vertical-offset="3285">
-          <folding>
-            <marker date="1392812622954" expanded="false" signature="14899:14909" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/awlib/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="16" selection-start="10874" selection-end="10874" vertical-scroll-proportion="0.0" vertical-offset="3645" max-vertical-offset="4500">
-          <folding>
-            <element signature="e#19#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/static/stylesheets/defaultstyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="0" selection-end="1063" vertical-scroll-proportion="-22.2" vertical-offset="0" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
@@ -547,16 +491,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton/designs/default.html">
+    <entry file="file://$PROJECT_DIR$/awlib/htmlcontain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="24" selection-start="2169" selection-end="2169" vertical-scroll-proportion="-20.625" vertical-offset="720" max-vertical-offset="1455">
+        <state line="51" column="19" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/awlib/htmlcontain.py">
+    <entry file="file://$PROJECT_DIR$/skeleton/static/scripts/esadmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="19" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.8224852" vertical-offset="209" max-vertical-offset="900">
+        <state line="228" column="97" selection-start="8595" selection-end="8595" vertical-scroll-proportion="-9.913794" vertical-offset="2845" max-vertical-offset="4860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/awlib/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="44" selection-start="6032" selection-end="6032" vertical-scroll-proportion="0.0" vertical-offset="2025" max-vertical-offset="4515">
+          <folding>
+            <element signature="e#19#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="52" selection-start="10993" selection-end="10993" vertical-scroll-proportion="-9.578947" vertical-offset="1584" max-vertical-offset="3300">
+          <folding>
+            <marker date="1392816711342" expanded="false" signature="15194:15204" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/awmanage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="14" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton/designs/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="56" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.5777778" vertical-offset="780" max-vertical-offset="1515">
           <folding />
         </state>
       </provider>

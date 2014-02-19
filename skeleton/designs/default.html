@@ -72,9 +72,12 @@ div#header {
     <p>{{pub["desc"]}}</p>
     {%else%}
       {% if pub["ispub"] %}
-        <li>{{renderpub(pub)}}</li>
+        <li>{{renderpub(pub)}}
       {%else%}
-        <li><strong>{{pub["title"]}}</strong>: {{pub["desc"]}} </li>
+        <li><strong>{{pub["title"]}}</strong>: {{pub["desc"]}}
+      {%endif%}
+      {% if pub["abstract"] and  pub["abstract"].strip()%}
+      <div><strong>Abstract:</strong>{{pub["abstract"] }}</div>
       {%endif%}
        {% if pub["pfiles"] %}
         <ul>
@@ -83,6 +86,7 @@ div#header {
         {%endfor%}
         </ul>
        {%endif%}
+      </li>
     {%endif%}
   {% endfor %}
 

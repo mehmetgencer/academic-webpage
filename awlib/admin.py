@@ -149,6 +149,7 @@ class AWAdmin(object):
             pub["title"]=req["title"]
             pub["desc"]=req["desc"]
             pub["pubtype"]=req["pubtype"]
+            pub["abstract"]=req["pubabstract"]
             #pub["ispub"]=req["ispub"]
             pub["authors"]=[{"name":x} for x in req["authors"]]
             forder=[x for x in filter(lambda x:x is not None,req["fileorder"])]

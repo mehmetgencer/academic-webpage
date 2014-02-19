@@ -140,6 +140,7 @@
                               {/authors}
                               <span id="authorInserter-{sectionKey}-{.publicationKey}" class="es-actionicon ui-icon ui-icon-plusthick" title="add author" onclick="addPubAuthor({sectionKey},{publicationKey});"></span>
                            </div>
+                           <br/><span class='pflabel'>{#i18n msg="Abstract"/}:</span><div id="pubabstract-{sectionKey}-{.publicationKey}" contentEditable="true" class="es-editable es-editable-aloha pubabstract" onInput="publicationNeedsSave({sectionKey},{.publicationKey});">{.abstract|s}</div>
                            <br/><span class='pflabel'>{#i18n msg="Yayın türü"/}:</span>
                            <select class='peditptype' id="peditptype-{sectionKey}-{.publicationKey}" onchange="$('#espubfields-{sectionKey}-{.publicationKey}').removeClass().addClass('espubfields-'+this.value);publicationNeedsSave({sectionKey},{.publicationKey});">
                            {% for t in esbibtex.typeList() %}

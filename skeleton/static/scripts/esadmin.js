@@ -212,6 +212,7 @@ function savePublication(skey,pkey){
 	esdebug("pubispub:"+pubispub);
 	title=$("#ptitle-"+skey+"-"+pkey).text();
 	desc=$("#pdesc-"+skey+"-"+pkey).html();
+	abstract=$("#pubabstract-"+skey+"-"+pkey).html();
 	authors=[];
 	esdebug("Finding authors:");
 	$("#pubauthors-"+skey+"-"+pkey+" .pubauthor").each(function(i,v){
@@ -225,7 +226,7 @@ function savePublication(skey,pkey){
 	   esdebug("file desc:"+$(v).text());
 	   filedesc[v.id.split("_____")[1]]=v.innerHTML;
 	   });
-	makeAPICall("/api/updatePub",{"sectionKey":skey,"publicationKey":pkey,"pubinfo":pubinfo,"pubtype":pubtype,"ispub":pubispub,"title":title,"desc":desc,"fileorder":getSortableOrder("pubfilelist-"+skey+"-"+pkey,true,"_____",true),"authors":authors,"filedesc":filedesc},function(){adminReload(skey,pkey);});
+	makeAPICall("/api/updatePub",{"sectionKey":skey,"publicationKey":pkey,"pubabstract":abstract,"pubinfo":pubinfo,"pubtype":pubtype,"ispub":pubispub,"title":title,"desc":desc,"fileorder":getSortableOrder("pubfilelist-"+skey+"-"+pkey,true,"_____",true),"authors":authors,"filedesc":filedesc},function(){adminReload(skey,pkey);});
 }
 
 
