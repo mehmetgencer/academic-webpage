@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+VERSION="0.1"
 import sys, os, os.path, shutil
-mydir=os.path.dirname(sys.argv[0])
+mydir=os.path.dirname(os.path.abspath(sys.argv[0]))
 sys.path.append(os.sep.join([mydir,"awlib"]))
 import esbibtex,admin,export
 cmdname=os.path.basename(sys.argv[0])
@@ -44,6 +45,7 @@ def main():
         for x in ["static","templates"]:
             shutil.rmtree(os.sep.join([workdir,x]))
             shutil.copytree(os.sep.join([mydir,"skeleton",x]),os.sep.join([workdir,x]))
+        shutil.copy(os.sep.join([mydir,"skeleton","designs","default.html"]),os.sep.join([workdir,"designs","default.html"]))
     os.chdir(workdir)
     if mode=="design":
         admin.srv()
